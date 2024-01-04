@@ -1,607 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <!-- Komentarz autora:
-        Będę wdzięczny zgłaszaniu mi błędów mojego kodu jak i również sugestii co do niego, nie jestem profesjonalnym web devem oraz jeszcze się uczę, dziękuję za wyrozumiałość <3
-        -->
-
-        <title>Creative Dog Paws</title>
-        <meta name="description" content="Arthi, self taught Furry artist and fursuit maker">
-        <meta name="keywords" content="creative dog paws,arthi, hira, art, fursuit, furry">
-        <meta name="author" content="@enigmaserg on telegram">
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="google" content="notranslate">
-
-        <!-- Open Graph -->
-        <meta property="og:title" content="Creative Dog Paws">
-        <meta property="og:description" content="Arthi, self taught Furry artist and fursuit maker">
-        <meta property="og:image" content="http://creativedogpaws.yeen.pl/assets/logo.jpg" name="image">
-        
-        <!-- External files -->
-        <link rel="icon" href="./assets/icon.svg">
-        <script src="../main.js"></script>
-
-
-        <!-- CSS -->
-        <link href="../css/main.css" rel="stylesheet" type="text/css">
-        <link href="../css/subpage.css" rel="stylesheet" type="text/css">
-        <link href="../css/modal.css" rel="stylesheet" type="text/css">
-        <link href="../css/animations.css" rel="stylesheet" type="text/css">
-        <link href="../css/media.css" rel="stylesheet" type="text/css">
-    </head>
-    <body onload="main()">
-
-        <!-- <div id="test-info-container">
-            <p>Test działania / Wersja do podglądu</p>
-        </div> -->
-
-        <!-- Image Modal -->
-
-        <div id="modal1" class="modal hidden">
-            <div id="modal1Close" class="close">
-                <img src="../assets/modal/close.svg">
-            </div>
-            <div class="content">
-                <img id="modal1Img">
-                <p id="modal1Text"></p>
-            </div>
+  <head>
+    <title>Creative Dog Paws</title>
+    <meta
+      name="description"
+      content="Arthi, self taught Furry artist and Fursuit maker"
+    />
+    <meta
+      name="keywords"
+      content="creative dog paws,arthi, hira, art, fursuit, furry"
+    />
+    <meta name="author" content="@enigmaserg on telegram" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <meta property="og:title" content="Creative Dog Paws" />
+    <meta
+      property="og:description"
+      content="Arthi, self taught Furry artist and Fursuit maker"
+    />
+    <meta
+      property="og:image"
+      content="http://creativedogpaws.yeen.pl/assets/logo.jpg"
+      name="image"
+    />
+    <link rel="icon" href="./assets/icon.svg" />
+    <script src="../main.js"></script>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/subpage.css" rel="stylesheet" type="text/css" />
+    <link href="../css/modal.css" rel="stylesheet" type="text/css" />
+    <link href="../css/animations.css" rel="stylesheet" type="text/css" />
+    <link href="../css/media.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="main()">
+    <div id="modal1" class="hidden modal">
+      <div id="modal1Close" class="close">
+        <img src="../assets/modal/close.svg" />
+      </div>
+      <div class="content">
+        <img id="modal1Img" />
+        <p id="modal1Text"></p>
+      </div>
+    </div>
+    <main>
+      <div id="main-section-content">
+        <div id="top">
+          <div id="left-inner-container">
+            <img src="../assets/logo.jpg" />
+            <h1>Creative <br />Dog <br />Paws</h1>
+          </div>
+          <div id="right-inner-container">
+            <h2>Commisions</h2>
+            <a href="#commisions-art">
+              <div
+                class="btnHover-1 button"
+                style="
+                  background: #8a0000;
+                  background: linear-gradient(
+                    29deg,
+                    #8a0000 25%,
+                    #7c1b00 50%,
+                    #662900 75%
+                  );
+                "
+              >
+                <h3>Art</h3>
+                <img
+                  src="../assets/nav/art.svg"
+                  alt="Art Icon"
+                  class="button-icon"
+                />
+              </div>
+            </a>
+            <a href="#commisions-fursuit">
+              <div
+                class="btnHover-1 button"
+                style="
+                  background: #858a00;
+                  background: linear-gradient(
+                    29deg,
+                    #858a00 25%,
+                    #4d7c00 50%,
+                    #296600 75%
+                  );
+                "
+              >
+                <h3>Fursuit</h3>
+                <img
+                  src="../assets/nav/fursuit.svg"
+                  alt="Fursuit Icon"
+                  class="button-icon"
+                />
+              </div>
+            </a>
+            <a
+              href="https://trello.com/b/qOH9Exmt/czarna-lista-c"
+              target="_blank"
+            >
+              <div
+                class="btnHover-1 button"
+                style="
+                  background: #838383;
+                  background: linear-gradient(
+                    29deg,
+                    #838383 25%,
+                    #636363 50%,
+                    #494949 75%
+                  );
+                "
+              >
+                <h3>BlackList</h3>
+                <img
+                  src="../assets/nav/blacklist.svg"
+                  alt="Blacklist Icon"
+                  class="button-icon"
+                />
+              </div>
+            </a>
+            <h2>Pozostałe</h2>
+            <a href="https://ko-fi.com/arthi_dogo" target="_blank">
+              <div
+                class="btnHover-1 button"
+                style="
+                  background: #001e6f;
+                  background: linear-gradient(
+                    29deg,
+                    #001e6f 25%,
+                    #004274 50%,
+                    #007d82 75%
+                  );
+                "
+              >
+                <h3>Ko-Fi</h3>
+                <img
+                  src="../assets/nav/ko-fi.svg"
+                  alt="Ko-Fi Icon"
+                  class="button-icon"
+                />
+              </div>
+            </a>
+            <a href="https://t.me/czterylapy" target="_blank">
+              <div
+                class="btnHover-1 button"
+                style="
+                  background: #940070;
+                  background: linear-gradient(
+                    29deg,
+                    #940070 25%,
+                    #6f0036 50%,
+                    #70002c 75%
+                  );
+                "
+              >
+                <h3>VLOG</h3>
+                <img
+                  src="../assets/nav/vlog.svg"
+                  alt="Social Media Icon"
+                  class="button-icon"
+                />
+              </div>
+            </a>
+          </div>
         </div>
-
-        <!-- Parent/Main section with buttons to sub-sections -->
-
-        <main>
-            <div id="main-section-content">
-                <div id="top">
-                    <div id="left-inner-container">
-                        <img src="../assets/logo.jpg">
-                        <h1>Creative <br>Dog <br>Paws</h1>
-                    </div>
-                    <div id="right-inner-container">
-                            <h2>Commisions</h2>
-                                <a href="#commisions-art">
-                                    <div class="button btnHover-1" style="background: rgb(138,0,0); background: linear-gradient(29deg, rgba(138,0,0,1) 25%, rgba(124,27,0,1) 50%, rgba(102,41,0,1) 75%);">
-                                        <h3>Art</h3>
-                                        <img src="../assets/nav/art.svg" alt="Art Icon" class="button-icon">
-                                    </div>
-                                </a>
-                                <a href="#commisions-fursuit">
-                                    <div class="button btnHover-1" style="background: rgb(133,138,0); background: linear-gradient(29deg, rgba(133,138,0,1) 25%, rgba(77,124,0,1) 50%, rgba(41,102,0,1) 75%);">
-                                        <h3>Fursuit</h3>
-                                        <img src="../assets/nav/fursuit.svg" alt="Fursuit Icon" class="button-icon">
-                                    </div>
-                                </a>
-                                <a href="https://trello.com/b/qOH9Exmt/czarna-lista-c" target="_blank">
-                                    <div class="button btnHover-1" style="background: rgb(131,131,131); background: linear-gradient(29deg, rgba(131,131,131,1) 25%, rgba(99,99,99,1) 50%, rgba(73,73,73,1) 75%);">
-                                        <h3>BlackList</h3>
-                                        <img src="../assets/nav/blacklist.svg" alt="Blacklist Icon" class="button-icon">
-                                    </div>
-                                </a>
-                                <h2>Pozostałe</h2>
-                                <a href="https://ko-fi.com/arthi_dogo" target="_blank">
-                                    <div class="button btnHover-1" style="background: rgb(0,30,111); background: linear-gradient(29deg, rgba(0,30,111,1) 25%, rgba(0,66,116,1) 50%, rgba(0,125,130,1) 75%);">
-                                        <h3>Ko-Fi</h3>
-                                        <img src="../assets/nav/ko-fi.svg" alt="Ko-Fi Icon" class="button-icon">
-                                    </div>
-                                </a>
-                                <a href="https://t.me/czterylapy" target="_blank">
-                                    <div class="button btnHover-1" style="background: rgb(148,0,112); background: linear-gradient(29deg, rgba(148,0,112,1) 25%, rgba(111,0,54,1) 50%, rgba(112,0,44,1) 75%);">
-                                        <h3>VLOG</h3>
-                                        <img src="../assets/nav/vlog.svg" alt="Social Media Icon" class="button-icon">
-                                    </div>
-                                </a>
-                    </div>
-                </div>
-                <div id="bottom">
-                    <div class="clickable-ref">
-                        <a href="https://www.instagram.com/creative_dog_paws/" title="Instagram" target="_blank">
-                            <img src="../assets/bottom/instagram.svg" alt="Instagram" class="btnHover-2">
-                        </a>
-                        <a href="https://www.tiktok.com/@arthi_thedogo" title="TikTok" target="_blank">
-                            <img src="../assets/bottom/tiktok.svg" alt="TikTok" class="btnHover-2">
-                        </a>
-                        <a href="https://t.me/artyarhiego" title="Grupa Telegram" target="_blank">
-                            <img src="../assets/bottom/telegram.svg" alt="Telegram" class="btnHover-2">
-                        </a>
-                    </div>
-                    <div class="clickable-ref">
-                        <a href="https://t.me/Arthi89" title="Wiadomość prywatna" target="_blank">
-                            <img src="../assets/bottom/dm.svg" alt="Direct Message Telegram" class="btnHover-2">
-                        </a>
-                        <a href="mailto:" title="E-Mail"target="_blank">
-                            <img src="../assets/bottom/email.svg" alt="E-Mail" class="btnHover-2">
-                        </a>
-                    </div>
-                    <div id="lang">
-                        <a href="../pl">
-                            <img src="../assets/bottom/lang.svg" alt="lang change" width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Sub-sections -->
-
-        <section id="commisions-art" class="subpage hidden">
-            <h1>Commisions - Art</h1>
-
-            <!-- Cennik -->
-            <article class="price-list">
-                <div class="inner-price">
-                    <h2>Price List</h2>
-                    <h3>Payment methods:</h3>
-                    <ul>
-                        <li>Bank Transfer</li>
-                        <li>BLIK</li>
-                        <li>PayPal</li>
-                    </ul>
-                    <a href="https://trello.com/b/3y7hzN7c/zlecenia-arthiego"><p>Trello</p></a>
-                    <a href="https://trello.com/b/qOH9Exmt/czarna-lista-c"><p>BlackList</p></a>
-                </div>
-                <div class="price left">
-                    <h4>Chibi</h4>
-                    <p>
-                        Sketch - 8$
-                        <br>
-                        Color - 12$
-                        <br>
-                        Shaded - 15$
-                    </p>
-                    <img src="../assets/art/chibi.jpg" alt="Wilson Chibi">
-                </div>
-                <div class="price right">
-                    <h4>Headshot</h4>
-                    <p>
-                        Sketch - 10$
-                        <br>
-                        Color - 15$
-                        <br>
-                        Shaded - 20$
-                    </p>
-                    <img src="../assets/art/headshot.jpg" alt="Arczi Headshot">
-                </div>
-                <div class="price left">
-                    <h4>Badge</h4>
-                    <p>
-                        Badge - 13$ + printout  1$
-                        <br>
-                        Badge Traditional - 20$
-                        <br>
-                        [We'll discuss about delivery]
-                    </p>
-                    <img src="../assets/art/badge.jpg" alt="Skulldog Badge">
-                </div>
-                <div class="price right">
-                    <h4>Halfbody</h4>
-                    <p>
-                        Sketch - 18$
-                        <br>
-                        Color - 20$
-                        <br>
-                        Shaded - 25$
-                    </p>
-                    <img src="../assets/art/halfbody.jpg" alt="Arthi Halfbody">
-                </div>
-                <div class="price left">
-                    <h4>Fullbody</h4>
-                    <p>
-                        Sketch - 25$
-                        <br>
-                        Color - 30$
-                        <br>
-                        Shaded - 35$
-                    </p>
-                    <img src="../assets/art/fullbody.jpg" alt="Lusus Fullbody">
-                </div>
-                <div class="price right">
-                    <h4>Stickers</h4>
-                    <p>
-                        One - 6$
-                        <br>
-                        Pack - 50$
-                        <br>
-                        + YCH - 3$
-                    </p>
-                   <img src="../assets/art/stickers.jpg" alt="Stickers">
-                </div>
-                <div class="price left">
-                    <h4>Reference Sheet</h4>
-                    <p>
-                        Chibi - 10$
-                        <br>
-                        Full + Headshot - 20$
-                        <br>
-                        Full + Headshot + Chibi back - 30$
-                        <br>
-                        Full + Headshot + Full back + "all you want" - 40$
-                    </p>
-                   <img src="../assets//art/reference.jpg" alt="Nekro Reference Sheet">
-                </div>
-                <div class="price right">
-                    <h4>Feral</h4>
-                    <p>
-                        Sketch - 17$
-                        <br>
-                        Color - 25$
-                        <br>
-                        Shaded - 35$   
-                    </p>
-                    <img src="../assets/art/feral.jpg" alt="Feral">
-                </div>
-                <a href="https://t.me/artyarhiego">
-                    <p>For more check out my Telgram channel!</p>
-                </a>
-            </article>
-
-             <!-- TOS -->
-             <article class="terms-of-service">
-                <div class="title">
-                    <p>--------------------------------------------</p>
-                    <h2>Terms Of Service</h2>
-                    <p>--------------------------------------------</p>
-                </div>
-                <div class="rulesdiv0">
-                    <p>
-                        <b>Lex retro non agit - The law is not retroactive,</b>
-                        <br>
-                        Work carried out prior to, or during, a change in the TOS will fall under the old TOS.
-                    </p>
-                    <p>
-                        Translated using DeepL, translations might be innacurate! Sorry :(
-                        <br>
-                        If you're unsure of something ask me on Telegram!
-                    </p>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Working hours:</h3>
-                    <ul>
-                        <li>During the week from 2pm to 6.30pm then I go to study,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Payment:</h3>
-                    <ul>
-                        <li>Payment by Bank Transfer, BLIK or via PayPal,</li>
-                        <li>Payment for the drawing before or after the first sketch is completed,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Client:</h3>
-                    <ul>
-                        <li>I do not accept assignments from younger people under the age of 13,</li>
-                        <li>Same goes for art nsfw only after the age of 18 and I have the right to require ID!</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Art:</h3>
-                    <ul>
-                        <li>
-                        <u>
-                            For constantly insisting on harassment or whining about waiting times, a person may end up at the end of the queue, <br>
-                            Remember I'm not a robot too I have the right to rest I'm learning. I also want to get out of the house, <br>
-                            I am an artist to whom there are large queues so waiting times may be longer than anticipated, <br>
-                        </u>
-                        </li>
-                        <li>
-                            Waiting time of six months to a year , from the time of notification to start work, <br>
-                            Before that you are in the queue. Please write to me 2 weeks after the last information due to my poor memory, <br>
-                        </li>
-                        <li>
-                            If the character is quite detailed/difficult, I may ask for a surcharge of 50% of the original price or refuse the job, <br>
-                            I judge whether a character is detailed/difficult by the reef it receives from the client, <br>
-                            - Accepts refs in the form of likes to toyhouse and readable compressed files or drawings on which the colours are clearly visible as well as the marks on the fur, <br> otherwise I may refuse to make an Art, 
-                        </li>
-                        <li>An additional figure in a drawing is +50% of the base price on the arte, commissaries with large arte do not apply,</li>
-                        <li>
-                            When buying reference sheet I give buyer all rights - that is, he can do a Character Redesign without asking my permission, <br>
-                            - When selling, please contact me for a quote,
-                        </li>
-                        <li>
-                            Any character what a person got for free <b>CANNOT</b> sell,<br>
-                            He or she must then exchange it for another character or hand it over to the author of the arte,
-                        </li>
-                        <li>
-                            Any changes to the arte, are until the WIP lineart is released,
-                        </li>
-                        <li>
-                            The client can request changes after the linea arte, although I take an additional charge of between 10% and 20% of the original price for substitutions,
-                        </li>
-                        <li>
-                            Work order or reserved slots before the commission closes are available,
-                        </li>
-                        <li>
-                            I have school and I have to take care of it. During the week I will only do small things on orders: <br>
-                            - I do about six commisions a month, <br>
-                            - The waiting period for an article can be up to approximately 6 months, <br>
-                            - possibly longer, but this is in extreme cases,
-                        </li>
-                        <li>The execution of a tracing/calico/any other theft will result in non-acceptance of the order,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Returns:</h3>
-                    <ul>
-                        <li>
-                            Once a sketch is accepted, there are no refunds. There is no % give back so you take on your own responsibility,
-                        </li>
-                        <li>
-                            If a sketch is abandoned, one is prohibited from using it,
-                        </li>
-                        <li>
-                            I have the right to resign at any stage for a variety of reasons,
-                        </li>
-                        <li>
-                            I'm sending out wipes of each stage of the work so I'll be up to date on what stage of drawing the work I'm at. <br>
-                            However, this does not absolve me from giving the money back, depending on what stage I am at so much the person will get the money,
-                        </li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>NSFW:</h3>
-                    <ul>
-                        <li>
-                            I make NSFW Arts and Stickers,
-                        </li>
-                        <li>
-                            I do not accept orders for fetishes that are very disgusting to me,
-                        </li>
-                        <li>
-                            Please bear in mind that I may be embarrassed to draw some things so please be a relief to me,
-                        </li>
-                        <li>
-                            The price for Arty of this type will be higher because of my mental comfort,
-                        </li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>BlackList:</h3>
-                    <p><b>You can be put on the Black List for:</b></p>
-                    <ul>
-                        <li>
-                            Stealing my work,
-                        </li>
-                        <li>
-                            Calculation of my work,
-                        </li>
-                        <li>
-                            Default or complete lack of payment.
-                        </li>
-                        <li>
-                            Persuading people to do the work for free,
-                        </li>
-                        <li>
-                            Ignoring messages and ghosing,
-                        </li>
-                        <li>
-                            Insulting,
-                        </li>
-                        <li>
-                            Toxic behaviour,
-                        </li>
-                        <li>
-                            Uprooting,
-                        </li>
-                    </ul>
-                    <p><b>EQUALS AN AUTOMATIC HIT ON THE ARTIST'S BLACKLIST:</b></p>
-                    <ul>
-                        <li>
-                            If the client delays OR avoids payment for a long period of time, the artist has every right to stop working on the order.
-                        </li>
-                    </ul>
-                </div>   
-            </article>
-            <!-- small credit -->
-            <p id="small-cpr">&copy; Creative Dog Paws 2023 by enigmaserg</p>
-        </section>
-
-        <section id="commisions-fursuit" class="subpage hidden">
-            <h1>Commisions - Fursuit</h1>
-            <article class="price-list">
-                <div class="inner-price">
-                    <h2>Price List</h2>
-                    <h3>Orders only for persons in Poland!</h3>
-                    <p>
-                    Please add the price of materials to each price:
-                    <br>
-                    fur, lining material, minky and filler
-                    </p>
-                    <a href="https://trello.com/b/3y7hzN7c/zlecenia-arthiego"><p>Trello</p></a>
-                    <a href="https://trello.com/b/qOH9Exmt/czarna-lista-c"><p>BlackList</p></a>
-                </div>
-                <div class="price left">
-                    <h3>Paws</h3>
-                    <p>
-                        Lined pair of paws - 70$
-                    </p>
-                    <img src="../assets/fursuit/paws.jpg" alt="Paws">
-                </div>
-                <div class="price right">
-                    <h3>Tail</h3>
-                    <p>
-                        Small: 30cm-50cm  - 30$
-                        <br>
-                        Natural: 60cm-100cm  - 50 $
-                        <br>
-                        Long: 110cm-200cm  - 80$
-                    </p>
-                    <img src="../assets/fursuit/tail.jpg" alt="Tail">
-                </div>
-                <div class="price left">
-                    <h3>Head</h3>
-                    <p>
-                        Eyelids + tongues on a magnet
-                        <br>
-                        Price: 300$
-                    </p>
-                    <img src="../assets/fursuit/head.jpg" alt="Head">
-                </div>
-                <div class="price right">
-                    <h3>Mini partial</h3>
-                    <p>
-                        The price quoted is a labour price including the cost of materials 
-                        <br>
-                        which can change depending on the complexity,
-                        <br>
-                        Price: 500$+
-                    </p>
-                    <img src="../assets/fursuit/mini-partial.jpg" alt="Mini Partial">
-                </div>
-                <div class="price left">
-                    <h3>Head Base</h3>
-                    <p>
-                        Base ready for furring - 80$
-                        <br>
-                        Furring the delivered base - 200$
-                    </p>
-                    <img src="../assets/fursuit/head-base.jpg" alt="Head Base">
-                </div>
-                <a href="https://t.me/artyarhiego">
-                    <p>For more check out my Telgram channel!</p>
-                </a>
-            </article>
-
-            <!-- TOS -->
-            <article class="terms-of-service">
-                <div class="title">
-                    <p>--------------------------------------------</p>
-                    <h2>Terms Of Service</h2>
-                    <p>--------------------------------------------</p>
-                </div>
-                <div class="rulesdiv0">
-                    <p>
-                        <b>Lex retro non agit - The law is not retroactive,</b>
-                        <br>
-                        Work carried out prior to, or during, a change in the TOS will fall under the old TOS.
-                    </p>
-                    <p>
-                        Translated using DeepL, translations might be innacurate! Sorry :(
-                        <br>
-                        If you're unsure of something ask me on Telegram!
-                    </p>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Working hours:</h3>
-                    <ul>
-                        <li>Friday to Sunday,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Payment:</h3>
-                    <ul>
-                        <li>Payment by Bank Transfer, BLIK or via PayPal,</li>
-                        <li>Payment for the drawing before or after the first sketch is completed,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Client:</h3>
-                    <ul>
-                        <li>I make fursuits for people over the age of 18 or 15 with parental consent,</li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>Fursuit:</h3>
-                    <ul>
-                        <li>
-                            No commissions are accepted for fursuits for a specific date! If someone wants a fursuit for a specific date they have to pay a surcharge of 125$ to the order,
-                        </li>
-                        <li>
-                            Waiting in line for your commissioner you can wait up to 6 months,
-                            <br>
-                            If you want me to start the commissary sooner, you will have to pay a surcharge of 50$,
-                        </li>
-                        <li>
-                            I am currently accepting orders for mini partials, parts, repairs and furring,
-                        </li>
-                        <li>
-                            I have the right to refuse a project if I find that the character has too heavy a design or I will be uncomfortable working on it,
-                        </li>
-                        <li>
-                            Making time is between 3 months and 6 months. It is possible to take an express slot, but then you have to pay a surcharge,
-                        </li>
-                        <li>
-                            I do not make stolen characters,
-                        </li>
-                        <li>
-                            The price of a Head in one colour is 250$, the price goes up as the number of colours increases (usually from 15$ upwards),
-                        </li>
-                        <li>
-                            I have the option of ordering furs from the states however, the buyer must realise that this is a double cost due to shipping and duty and VAT charges.
-                        </li>
-                        <li>
-                            Instalments: 30% which is the cost of materials. The rest are labour costs, which I break down over several months. Repayment of instalments is up to one year, then I can cancel your order.
-                        </li>
-                        <li>
-                            If you cancel an order <b>NOT</b> you will get a 100% refund, but only a part due to the materials spent,
-                        </li>
-                        <li>
-                            I am a very thorough person, my works are solidly made and aesthetically pleasing. I put a lot of heart into them. I am a perfectionist and have to have everything done perfectly,
-                        </li>
-                        <li>
-                            I don't make pawpaws from the customer's patern, I have my own!
-                        </li>
-                        <li>
-                            Sometimes I don't work at weekends because I'm not at home.
-                        </li>
-                        <li>
-                            I try to send out wipes regularly and say what still needs to be improved,
-                        </li>
-                        <li>
-                            I don't like to be rushed, please admonish me or ask me how the work is going,
-                        </li>
-                        <li>
-                            I may charge a small fee for the cardboard box because I don't always have it because I usually take it after the materials, but you know sometimes it will run out (I may buy whole stacks soon to be able to ship my own boxes),
-                        </li>
-                        <li>
-                            I have purchased more lining materials you will be able to choose what materials you want for the inside,
-                        </li>
-                        <li>
-                            I do all improvements to paws as well as fursuit for free but shipping costs are covered by the customer,
-                        </li>
-                    </ul>
-                </div>
-                <div class="rulesdiv1">
-                    <h3>BlackList:</h3>
-                    <p><b>You can be put on the Black List for:</b></p>
-                    <ul>
-                        <li>
-                            Stealing my work,
-                        </li>
-                        <li>
-                            Calculation of my work,
-                        </li>
-                        <li>
-                            Default or complete lack of payment.
-                        </li>
-                        <li>
-                            Persuading people to do the work for free,
-                        </li>
-                        <li>
-                            Ignoring messages and ghosing,
-                        </li>
-                        <li>
-                            Insulting,
-                        </li>
-                        <li>
-                            Toxic behaviour,
-                        </li>
-                        <li>
-                            Uprooting,
-                        </li>
-                    </ul>
-                    <p><b>EQUALS AN AUTOMATIC HIT ON THE ARTIST'S BLACKLIST:</b></p>
-                    <ul>
-                        <li>
-                            If the client delays OR avoids payment for a long period of time, the artist has every right to stop working on the order.
-                        </li>
-                    </ul>
-                </div> 
-            </article>
-
-            <!-- small credit -->
-            <p id="small-cpr">&copy; Creative Dog Paws 2023 by enigmaserg</p>
-        </section>
-    </body>
-</html>  
+        <div id="bottom">
+          <div class="clickable-ref">
+            <a
+              href="https://www.instagram.com/creative_dog_paws/"
+              title="Instagram"
+              target="_blank"
+            >
+              <img
+                src="../assets/bottom/instagram.svg"
+                alt="Instagram"
+                class="btnHover-2"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@arthi_thedogo"
+              title="TikTok"
+              target="_blank"
+            >
+              <img
+                src="../assets/bottom/tiktok.svg"
+                alt="TikTok"
+                class="btnHover-2"
+              />
+            </a>
+            <a
+              href="https://t.me/artyarhiego"
+              title="Grupa Telegram"
+              target="_blank"
+            >
+              <img
+                src="../assets/bottom/telegram.svg"
+                alt="Telegram"
+                class="btnHover-2"
+              />
+            </a>
+          </div>
+          <div class="clickable-ref">
+            <a
+              href="https://t.me/Arthi89"
+              title="Wiadomość prywatna"
+              target="_blank"
+            >
+              <img
+                src="../assets/bottom/dm.svg"
+                alt="Direct Message Telegram"
+                class="btnHover-2"
+              />
+            </a>
+            <a href="mailto:" title="E-Mail" target="_blank">
+              <img
+                src="../assets/bottom/email.svg"
+                alt="E-Mail"
+                class="btnHover-2"
+              />
+            </a>
+          </div>
+          <div id="lang">
+            <a href="../pl">
+              <img
+                src="../assets/bottom/lang.svg"
+                alt="lang change"
+                width="32"
+                height="32"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section id="commisions-art" class="hidden subpage">
+      <h1>Commisions - Art</h1>
+      <article class="price-list">
+        <div class="inner-price">
+          <h2>Price List</h2>
+          <h3>Payment methods:</h3>
+          <ul>
+            <li>Bank Transfer</li>
+            <li>BLIK</li>
+            <li>PayPal</li>
+          </ul>
+          <a href="https://trello.com/b/3y7hzN7c/zlecenia-arthiego"
+            ><p>Trello</p></a
+          >
+          <a href="https://trello.com/b/qOH9Exmt/czarna-lista-c"
+            ><p>BlackList</p></a
+          >
+        </div>
+        <div class="left price">
+          <h4>Chibi</h4>
+          <p>
+            Sketch - 8$ <br />
+            Color - 12$ <br />
+            Shaded - 15$
+          </p>
+          <img src="../assets/art/chibi.jpg" alt="Wilson Chibi" />
+        </div>
+        <div class="price right">
+          <h4>Headshot</h4>
+          <p>
+            Sketch - 10$ <br />
+            Color - 15$ <br />
+            Shaded - 20$
+          </p>
+          <img src="../assets/art/headshot.jpg" alt="Arczi Headshot" />
+        </div>
+        <div class="left price">
+          <h4>Badge</h4>
+          <p>
+            Badge - 13$ + printout 1$ <br />
+            Badge Traditional - 20$ <br />
+            [We'll discuss about delivery]
+          </p>
+          <img src="../assets/art/badge.jpg" alt="Skulldog Badge" />
+        </div>
+        <div class="price right">
+          <h4>Halfbody</h4>
+          <p>
+            Sketch - 18$ <br />
+            Color - 20$ <br />
+            Shaded - 25$
+          </p>
+          <img src="../assets/art/halfbody.jpg" alt="Arthi Halfbody" />
+        </div>
+        <div class="left price">
+          <h4>Fullbody</h4>
+          <p>
+            Sketch - 25$ <br />
+            Color - 30$ <br />
+            Shaded - 35$
+          </p>
+          <img src="../assets/art/fullbody.jpg" alt="Lusus Fullbody" />
+        </div>
+        <div class="price right">
+          <h4>Stickers</h4>
+          <p>
+            One - 6$ <br />
+            Pack - 50$ <br />
+            + YCH - 3$
+          </p>
+          <img src="../assets/art/stickers.jpg" alt="Stickers" />
+        </div>
+        <div class="left price">
+          <h4>Reference Sheet</h4>
+          <p>
+            Chibi - 10$ <br />
+            Full + Headshot - 20$ <br />
+            Full + Headshot + Chibi back - 30$ <br />
+            Full + Headshot + Full back + "all you want" - 40$
+          </p>
+          <img src="../assets//art/reference.jpg" alt="Nekro Reference Sheet" />
+        </div>
+        <div class="price right">
+          <h4>Feral</h4>
+          <p>
+            Sketch - 17$ <br />
+            Color - 25$ <br />
+            Shaded - 35$
+          </p>
+          <img src="../assets/art/feral.jpg" alt="Feral" />
+        </div>
+        <a href="https://t.me/artyarhiego">
+          <p>For more check out my Telgram channel!</p>
+        </a>
+      </article>
+      <article class="terms-of-service">
+        <div class="title">
+          <p>--------------------------------------------</p>
+          <h2>Terms Of Service</h2>
+          <p>--------------------------------------------</p>
+        </div>
+        <div class="rulesdiv0">
+          <p>
+            <b>Lex retro non agit - The law is not retroactive,</b> <br />
+            Work carried out prior to, or during, a change in the TOS will fall
+            under the old TOS.
+          </p>
+          <p>
+            Translated using DeepL, translations might be innacurate! Sorry :(
+            <br />
+            If you're unsure of something ask me on Telegram!
+          </p>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Working hours:</h3>
+          <ul>
+            <li>During the week from 2pm to 6.30pm then I go to study,</li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Payment:</h3>
+          <ul>
+            <li>Payment by Bank Transfer, BLIK or via PayPal,</li>
+            <li>
+              Payment for the drawing before or after the first sketch is
+              completed,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Client:</h3>
+          <ul>
+            <li>
+              I do not accept assignments from younger people under the age of
+              13,
+            </li>
+            <li>
+              Same goes for art nsfw only after the age of 18 and I have the
+              right to require ID!
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Art:</h3>
+          <ul>
+            <li>
+              <u>
+                For constantly insisting on harassment or whining about waiting
+                times, a person may end up at the end of the queue, <br />
+                Remember I'm not a robot too I have the right to rest I'm
+                learning. I also want to get out of the house, <br />
+                I am an artist to whom there are large queues so waiting times
+                may be longer than anticipated, <br />
+              </u>
+            </li>
+            <li>
+              Waiting time of six months to a year , from the time of
+              notification to start work, <br />
+              Before that you are in the queue. Please write to me 2 weeks after
+              the last information due to my poor memory, <br />
+            </li>
+            <li>
+              If the character is quite detailed/difficult, I may ask for a
+              surcharge of 50% of the original price or refuse the job, <br />
+              I judge whether a character is detailed/difficult by the reef it
+              receives from the client, <br />
+              - Accepts refs in the form of likes to toyhouse and readable
+              compressed files or drawings on which the colours are clearly
+              visible as well as the marks on the fur, <br />
+              otherwise I may refuse to make an Art,
+            </li>
+            <li>
+              An additional figure in a drawing is +50% of the base price on the
+              arte, commissaries with large arte do not apply,
+            </li>
+            <li>
+              When buying reference sheet I give buyer all rights - that is, he
+              can do a Character Redesign without asking my permission, <br />
+              - When selling, please contact me for a quote,
+            </li>
+            <li>
+              Any character what a person got for free <b>CANNOT</b> sell,<br />
+              He or she must then exchange it for another character or hand it
+              over to the author of the arte,
+            </li>
+            <li>
+              Any changes to the arte, are until the WIP lineart is released,
+            </li>
+            <li>
+              The client can request changes after the linea arte, although I
+              take an additional charge of between 10% and 20% of the original
+              price for substitutions,
+            </li>
+            <li>
+              Work order or reserved slots before the commission closes are
+              available,
+            </li>
+            <li>
+              I have school and I have to take care of it. During the week I
+              will only do small things on orders: <br />
+              - I do about six commisions a month, <br />
+              - The waiting period for an article can be up to approximately 6
+              months, <br />
+              - possibly longer, but this is in extreme cases,
+            </li>
+            <li>
+              The execution of a tracing/calico/any other theft will result in
+              non-acceptance of the order,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Returns:</h3>
+          <ul>
+            <li>
+              Once a sketch is accepted, there are no refunds. There is no %
+              give back so you take on your own responsibility,
+            </li>
+            <li>If a sketch is abandoned, one is prohibited from using it,</li>
+            <li>
+              I have the right to resign at any stage for a variety of reasons,
+            </li>
+            <li>
+              I'm sending out wipes of each stage of the work so I'll be up to
+              date on what stage of drawing the work I'm at. <br />
+              However, this does not absolve me from giving the money back,
+              depending on what stage I am at so much the person will get the
+              money,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>NSFW:</h3>
+          <ul>
+            <li>I make NSFW Arts and Stickers,</li>
+            <li>
+              I do not accept orders for fetishes that are very disgusting to
+              me,
+            </li>
+            <li>
+              Please bear in mind that I may be embarrassed to draw some things
+              so please be a relief to me,
+            </li>
+            <li>
+              The price for Arty of this type will be higher because of my
+              mental comfort,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>BlackList:</h3>
+          <p><b>You can be put on the Black List for:</b></p>
+          <ul>
+            <li>Stealing my work,</li>
+            <li>Calculation of my work,</li>
+            <li>Default or complete lack of payment.</li>
+            <li>Persuading people to do the work for free,</li>
+            <li>Ignoring messages and ghosing,</li>
+            <li>Insulting,</li>
+            <li>Toxic behaviour,</li>
+            <li>Uprooting,</li>
+          </ul>
+          <p><b>EQUALS AN AUTOMATIC HIT ON THE ARTIST'S BLACKLIST:</b></p>
+          <ul>
+            <li>
+              If the client delays OR avoids payment for a long period of time,
+              the artist has every right to stop working on the order.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <p id="small-cpr">&copy; Creative Dog Paws 2023 by enigmaserg</p>
+    </section>
+    <section id="commisions-fursuit" class="hidden subpage">
+      <h1>Commisions - Fursuit</h1>
+      <article class="price-list">
+        <div class="inner-price">
+          <h2>Price List</h2>
+          <h3>Orders only for persons in Poland!</h3>
+          <p>
+            Please add the price of materials to each price: <br />
+            fur, lining material, minky and filler
+          </p>
+          <a href="https://trello.com/b/3y7hzN7c/zlecenia-arthiego"
+            ><p>Trello</p></a
+          >
+          <a href="https://trello.com/b/qOH9Exmt/czarna-lista-c"
+            ><p>BlackList</p></a
+          >
+        </div>
+        <div class="left price">
+          <h3>Paws</h3>
+          <p>Lined pair of paws - 70$</p>
+          <img src="../assets/fursuit/paws.jpg" alt="Paws" />
+        </div>
+        <div class="price right">
+          <h3>Tail</h3>
+          <p>
+            Small: 30cm-50cm - 30$ <br />
+            Natural: 60cm-100cm - 50 $ <br />
+            Long: 110cm-200cm - 80$
+          </p>
+          <img src="../assets/fursuit/tail.jpg" alt="Tail" />
+        </div>
+        <div class="left price">
+          <h3>Head</h3>
+          <p>
+            Eyelids + tongues on a magnet <br />
+            Price: 300$
+          </p>
+          <img src="../assets/fursuit/head.jpg" alt="Head" />
+        </div>
+        <div class="price right">
+          <h3>Mini partial</h3>
+          <p>
+            The price quoted is a labour price including the cost of materials
+            <br />
+            which can change depending on the complexity, <br />
+            Price: 500$+
+          </p>
+          <img src="../assets/fursuit/mini-partial.jpg" alt="Mini Partial" />
+        </div>
+        <div class="left price">
+          <h3>Head Base</h3>
+          <p>
+            Base ready for furring - 80$ <br />
+            Furring the delivered base - 200$
+          </p>
+          <img src="../assets/fursuit/head-base.jpg" alt="Head Base" />
+        </div>
+        <a href="https://t.me/artyarhiego">
+          <p>For more check out my Telgram channel!</p>
+        </a>
+      </article>
+      <article class="terms-of-service">
+        <div class="title">
+          <p>--------------------------------------------</p>
+          <h2>Terms Of Service</h2>
+          <p>--------------------------------------------</p>
+        </div>
+        <div class="rulesdiv0">
+          <p>
+            <b>Lex retro non agit - The law is not retroactive,</b> <br />
+            Work carried out prior to, or during, a change in the TOS will fall
+            under the old TOS.
+          </p>
+          <p>
+            Translated using DeepL, translations might be innacurate! Sorry :(
+            <br />
+            If you're unsure of something ask me on Telegram!
+          </p>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Working hours:</h3>
+          <ul>
+            <li>Friday to Sunday,</li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Payment:</h3>
+          <ul>
+            <li>Payment by Bank Transfer, BLIK or via PayPal,</li>
+            <li>
+              Payment for the drawing before or after the first sketch is
+              completed,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Client:</h3>
+          <ul>
+            <li>
+              I make fursuits for people over the age of 18 or 15 with parental
+              consent,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>Fursuit:</h3>
+          <ul>
+            <li>
+              No commissions are accepted for fursuits for a specific date! If
+              someone wants a fursuit for a specific date they have to pay a
+              surcharge of 125$ to the order,
+            </li>
+            <li>
+              Waiting in line for your commissioner you can wait up to 6 months,
+              <br />
+              If you want me to start the commissary sooner, you will have to
+              pay a surcharge of 50$,
+            </li>
+            <li>
+              I am currently accepting orders for mini partials, parts, repairs
+              and furring,
+            </li>
+            <li>
+              I have the right to refuse a project if I find that the character
+              has too heavy a design or I will be uncomfortable working on it,
+            </li>
+            <li>
+              Making time is between 3 months and 6 months. It is possible to
+              take an express slot, but then you have to pay a surcharge,
+            </li>
+            <li>I do not make stolen characters,</li>
+            <li>
+              The price of a Head in one colour is 250$, the price goes up as
+              the number of colours increases (usually from 15$ upwards),
+            </li>
+            <li>
+              I have the option of ordering furs from the states however, the
+              buyer must realise that this is a double cost due to shipping and
+              duty and VAT charges.
+            </li>
+            <li>
+              Instalments: 30% which is the cost of materials. The rest are
+              labour costs, which I break down over several months. Repayment of
+              instalments is up to one year, then I can cancel your order.
+            </li>
+            <li>
+              If you cancel an order <b>NOT</b> you will get a 100% refund, but
+              only a part due to the materials spent,
+            </li>
+            <li>
+              I am a very thorough person, my works are solidly made and
+              aesthetically pleasing. I put a lot of heart into them. I am a
+              perfectionist and have to have everything done perfectly,
+            </li>
+            <li>
+              I don't make pawpaws from the customer's patern, I have my own!
+            </li>
+            <li>Sometimes I don't work at weekends because I'm not at home.</li>
+            <li>
+              I try to send out wipes regularly and say what still needs to be
+              improved,
+            </li>
+            <li>
+              I don't like to be rushed, please admonish me or ask me how the
+              work is going,
+            </li>
+            <li>
+              I may charge a small fee for the cardboard box because I don't
+              always have it because I usually take it after the materials, but
+              you know sometimes it will run out (I may buy whole stacks soon to
+              be able to ship my own boxes),
+            </li>
+            <li>
+              I have purchased more lining materials you will be able to choose
+              what materials you want for the inside,
+            </li>
+            <li>
+              I do all improvements to paws as well as fursuit for free but
+              shipping costs are covered by the customer,
+            </li>
+          </ul>
+        </div>
+        <div class="rulesdiv1">
+          <h3>BlackList:</h3>
+          <p><b>You can be put on the Black List for:</b></p>
+          <ul>
+            <li>Stealing my work,</li>
+            <li>Calculation of my work,</li>
+            <li>Default or complete lack of payment.</li>
+            <li>Persuading people to do the work for free,</li>
+            <li>Ignoring messages and ghosing,</li>
+            <li>Insulting,</li>
+            <li>Toxic behaviour,</li>
+            <li>Uprooting,</li>
+          </ul>
+          <p><b>EQUALS AN AUTOMATIC HIT ON THE ARTIST'S BLACKLIST:</b></p>
+          <ul>
+            <li>
+              If the client delays OR avoids payment for a long period of time,
+              the artist has every right to stop working on the order.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <p id="small-cpr">&copy; Creative Dog Paws 2023 by enigmaserg</p>
+    </section>
+  </body>
+</html>

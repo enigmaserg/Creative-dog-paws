@@ -1,81 +1,114 @@
 @keyframes FadeIn {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
+  from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    opacity: 0.2;
+  }
+
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+  }
 }
 
 @keyframes ClickableHover {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.25);
-    }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
 }
 
 @keyframes SlideFadeInLeft {
-    from {
-        transform: translate(-75px);
-        opacity: 0;
-    }
-    to {
-        transform: translate(0px);
-        opacity: 1;
-    }
+  from {
+    transform: translate(-75px);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+  }
 }
 
 @keyframes SlideFadeInRight {
-    from {
-        transform: translate(75px);
-        opacity: 0;
-    }
-    to {
-        transform: translate(0px);
-        opacity: 1;
-    }
+  from {
+    transform: translate(75px);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+  }
 }
 
 @keyframes zoom {
-    from {transform:scale(0); opacity: 0.2;}
-    to {transform:scale(1); opacity: 1;}
+  from {
+    transform: scale(0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    opacity: 0.2;
   }
 
+  to {
+    transform: scale(1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+  }
+}
+
 main {
-    animation: FadeIn 0.5s ease;
+  animation: FadeIn 0.5s ease;
 }
 
-.left, .right {
-    opacity: 0;
+.left,
+.right {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
 }
 
-.leftFadeIn, .rightFadeIn {
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
+.leftFadeIn,
+.rightFadeIn {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 
 .leftFadeIn {
-    animation-name: SlideFadeInLeft;
+  animation-name: SlideFadeInLeft;
 }
 
 .rightFadeIn {
-    animation-name: SlideFadeInRight;
+  animation-name: SlideFadeInRight;
 }
 
-
 .btnHover-1 {
-    transform: scale(1);
-    transition: transform 0.40s;
+  transform: scale(1);
+  transition: transform 0.4s;
 }
 
 .btnHover-1:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.btnHover-1:focus-visible {
+  transform: scale(1.05);
 }
 
 .btnHover-2 {
-    transform: scale(1);
-    transition: transform 0.5s;
+  transform: scale(1);
+  transition: transform 0.5s;
 }
 
 .btnHover-2:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.btnHover-2:focus-visible {
+  transform: scale(1.15);
 }

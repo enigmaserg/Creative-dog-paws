@@ -1,79 +1,80 @@
-@media only screen and (max-width: 700px){
-    .modal-content {
-      width: 95%;
-    }
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 95%;
   }
+}
 
 @media only screen and (max-width: 1021px) {
-    :root {
-        font-size: 16px;
-    }
+  html {
+    font-size: 16px;
+  }
 
-    .price-list > div > img {
-        max-width: 60%;
-    }
+  .price-list > div > img {
+    max-width: 60%;
+  }
 }
 
 @media only screen and (max-width: 964px) {
-    :root {
-        font-size: 14px;
-    }
+  html {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 936px) {
-    :root {
-        font-size: 18px;
-    }
+  html {
+    font-size: 18px;
+  }
 
-    #top {
-        padding-bottom: 20px;
-    }
+  #top {
+    padding-bottom: 20px;
+  }
 
-    #left-inner-container {
-        align-items: center;
-        padding-bottom: 10px;
-    }
+  #left-inner-container {
+    align-items: center;
+    padding-bottom: 10px;
+  }
 
-    #left-inner-container  > h1 {
-        text-align: center;
-    }
+  #left-inner-container > h1 {
+    text-align: center;
+  }
 
-    #right-inner-container {
-        padding-top: 5px;
-    }
+  #right-inner-container {
+    padding-top: 5px;
+  }
 
-    .button {
-        height: 65px;
-        width: 330px;
-        border-radius: 36px;
-    }
+  .button {
+    height: 65px;
+    width: 330px;
+    border-radius: 36px;
+  }
 
-    .price-list > div > img {
-        max-width: 75%;
-    }
+  .price-list > div > img {
+    max-width: 75%;
+  }
 }
 
 @media only screen and (max-width: 616px) {
-    :root {
-        font-size: 16px;
-    }
+  html {
+    font-size: 16px;
+  }
 
-    .button {
-        height: 55px;
-        width: 275px;
-        border-radius: 24px;
-    }
+  .button {
+    height: 55px;
+    width: 275px;
+    border-radius: 24px;
+  }
 
-    .price-list > div > img {
-        max-width: 85%;
-    }
+  .price-list > div > img {
+    max-width: 85%;
+  }
 }
 
 @media only screen and (max-width: 506px) {
-    :root {
-        font-size: 14px;
-    }
-    .price-list > div > img {
-        max-width: 100%;
-    }
+  html {
+    font-size: 14px;
+  }
+
+  .price-list > div > img {
+    max-width: 100%;
+  }
 }
