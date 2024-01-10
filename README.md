@@ -8,8 +8,6 @@ Naprawdę nie wiem co tu wpisać. Chyba jedynie to że stronę dalej aktualizuj�
 <br>
 
 ### To do list -  [23:34/04.01]
-- [ ] Dodanie do cennika Fursuit: feet pawsy,
-- [ ] Zoptymalizowanie zdjęć na stronie,
-- [ ] Przeniesienie dużych zdjęć na zewnętrzny serwer i ładowanie z niego, 
-- [ ] Przerobienie głównej sekcji w taki sposób, aby lepiej wyświetlała się na problematycznych urządzeniach,
-- [ ] Pomyślenie co można zmienić i ulepszyć,
+- [ ] Baza danych z cennikami, przykładami, statusem komiszy oraz zarządzanie z panelu poprzez zalogowanie,
+- [ ] Przerobienie głównej sekcji dla lepszej responsywności,
+- [ ] Dodanie Feet Pawsów do cennika Fursuit,
